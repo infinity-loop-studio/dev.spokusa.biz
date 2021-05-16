@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/uikit.css"/>
+    <link rel="stylesheet" href="/administrator/templates/il_dashboard/css/switcher.css"/>
+    <link rel="stylesheet" href="/administrator/templates/il_dashboard/css/uikit_overrides.css"/>
+</head>
+<body>
+<div class="uk-position-fixed uk-width-1-6@l uk-height-viewport uk-background-secondary uk-light">
+    <div class="uk-padding-small">
+        <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+            <li class="uk-active"><a href="/dashboard">Панель управления</a></li>
+            <li class="uk-nav-header">Header</li>
+            <li>
+                <a href="/administrator/categories"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Категории</a>
+
+            </li>
+            <li><a href="/administrator/products"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Товары</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="/logout"><span class="uk-margin-small-right" uk-icon="icon: sign-out"></span> Выйти</a></li>
+        </ul>
+    </div>
+</div>
+<div uk-grid class="uk-grid-collapse">
+    <div class="uk-width-1-6@l"></div>
+    <div class="uk-width-5-6@l">
+        <%- body; %>
+    </div>
+</div>
+<script src="/js/uikit.js"></script>
+<script src="/js/uikit-icons.js"></script>
+</body>
+</html>

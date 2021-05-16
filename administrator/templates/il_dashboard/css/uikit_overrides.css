@@ -1,0 +1,10 @@
+@media (min-width: 960px) {
+  .uk-offcanvas-bar {
+    left: -750px;
+    width: 750px;
+  }
+
+  .uk-offcanvas-flip .uk-offcanvas-bar {
+    right: -750px;
+  }
+}

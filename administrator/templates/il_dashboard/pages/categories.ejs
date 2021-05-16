@@ -1,0 +1,113 @@
+<div uk-sticky="offset: 0" class="uk-width-1-1@l uk-background-muted uk-padding-small uk-flex uk-flex-between@l uk-flex-middle">
+    <h1 class="uk-margin-remove">Категории</h1>
+    <ul class="uk-iconnav">
+        <li><a uk-icon="icon: plus" uk-toggle="target: #create-category"></a></li>
+        <li><a href="#" uk-icon="icon: file-edit"></a></li>
+        <li><a href="#" uk-icon="icon: copy"></a></li>
+        <li><a href="#" uk-icon="icon: trash"></a></li>
+    </ul>
+</div>
+
+<table class="uk-table uk-table-hover uk-table-middle uk-table-divider uk-margin-large-top">
+    <thead>
+    <tr>
+        <th class="uk-table-shrink"></th>
+        <th class="uk-table-shrink">#</th>
+        <th class="uk-table-shrink"><span class="uk-margin-small-right uk-icon" uk-icon="image"></span></th>
+        <th class="uk-table-shrink">Название</th>
+        <th class="uk-table-expand">Описание</th>
+        <th class="uk-width-small">Товары</th>
+        <th class="uk-table-shrink uk-text-nowrap">Инструменты</th>
+        <th class="uk-table-shrink uk-text-nowrap"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <input class="uk-checkbox" type="checkbox">
+        </td>
+        <td>1</td>
+        <td>
+            <img class="uk-preserve-width" src="https://getuikit.com/docs/images/avatar.jpg" width="40" alt="">
+        </td>
+        <td class="uk-table-link">
+            <a class="uk-link-reset" href="">Мужчинам</a>
+        </td>
+        <td class="uk-table-link">
+            <a class="uk-link-reset" href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</a>
+        </td>
+        <td class="uk-text-truncate">
+            257 [ Показать ]
+        </td>
+        <td class="uk-text-nowrap">
+            <ul class="uk-iconnav">
+                <li>
+                    <a href="#" uk-icon="icon: file-edit"></a>
+                </li>
+                <li>
+                    <a href="#" uk-icon="icon: copy"></a>
+                </li>
+                <li>
+                    <a href="#" uk-icon="icon: trash"></a>
+                </li>
+            </ul>
+        </td>
+        <td>
+            <input type="checkbox" id="toggle-1" class="checkbox" checked/>
+            <label for="toggle-1" class="switch"></label>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- OFFCANVAS -->
+<div id="create-category" uk-offcanvas="overlay: true; flip: true; bg-close: false">
+    <div class="uk-offcanvas-bar uk-padding-small">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Создать новую категорию</h3>
+
+        <ul class="uk-subnav uk-subnav-pill" uk-switcher>
+            <li><a href="#">Русский</a></li>
+            <li><a href="#">Украински</a></li>
+        </ul>
+
+        <ul class="uk-switcher uk-margin">
+            <li>
+                <form id="newcategory">
+                    <fieldset class="uk-fieldset">
+
+                        <div class="uk-margin">
+                            <input class="uk-input" type="text" placeholder="Название категории" required>
+                        </div>
+
+                        <div class="uk-margin">
+                            <textarea class="uk-textarea" rows="5" placeholder="Описание" required></textarea>
+                        </div>
+
+                        <div class="uk-margin">
+                            <textarea class="uk-textarea" rows="5" placeholder="Короткое описание" required></textarea>
+                        </div>
+
+                        <div class="uk-margin">
+                            <select class="uk-select">
+                                <option disabled selected>Родительская категория</option>
+                            </select>
+                        </div>
+
+                    </fieldset>
+                    <p uk-margin>
+                        <button class="uk-button uk-button-primary" data-action="newcategory.save">Сохранить</button>
+                        <button class="uk-button uk-button-secondary" data-action="newcategory.save.create">Сохранить и создать</button>
+                        <button class="uk-button uk-button-secondary" data-action="newcategory.save.hide">Сохранить и закрыть</button>
+                        <button class="uk-button uk-button-danger" onclick="UIkit.offcanvas('#create-category').hide()">Отмена</button>
+                    </p>
+                </form>
+            </li>
+            <li></li>
+        </ul>
+
+    </div>
+</div>
+<!-- OFFCANVAS -->
